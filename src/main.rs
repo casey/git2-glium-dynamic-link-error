@@ -1,4 +1,6 @@
-extern crate core_graphics;
-
 fn main() {
+}
+
+#[link(name = "ApplicationServices", kind = "framework")]
+extern {
 }

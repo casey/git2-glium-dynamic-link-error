@@ -17,3 +17,21 @@ I originally hit this error when using `git2-rs` and `glium`, but managed to whi
 I then started stripping more things away, and found that just the build script from `openssl-sys` is enough to trigger the error.
 
 Now I have the error triggering just by running `pkg_config::find_library("openssl")` in the build script.
+
+This produces the following output from the build script:
+
+```
+cargo:rustc-link-search=native=/opt/local/lib
+cargo:rustc-link-lib=ssl
+cargo:rustc-link-lib=crypto
+```
+
+Although just the first line is enough to trigger the error.
+
+I also removed the dependency on core-graphics-rs, since just the following in main.rs is enough to trigger the error:
+
+```
+#[link(name = "ApplicationServices", kind = "framework")]
+extern {
+}
+```
