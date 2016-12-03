@@ -1,8 +1,10 @@
 [package]
-name = "git2-rs-linker-error"
+name = "rust-dynamic-linker-error"
 version = "0.0.0"
 authors = ["Casey Rodarmor <casey@rodarmor.com>"]
 
-[dependencies]
-core-graphics = "=0.3.2"
-openssl-sys   = "=0.9.2"
+[dependencies.core-graphics]
+git = "https://github.com/servo/core-graphics-rs"
+
+[dependencies.openssl-sys]
+git = "https://github.com/sfackler/rust-openssl"
