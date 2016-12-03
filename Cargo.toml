@@ -2,9 +2,10 @@
 name = "rust-dynamic-linker-error"
 version = "0.0.0"
 authors = ["Casey Rodarmor <casey@rodarmor.com>"]
+build = "build.rs"
 
-[dependencies.openssl-sys]
-git = "https://github.com/sfackler/rust-openssl"
+[build-dependencies]
+pkg-config = "0.3"
 
 [dependencies.core-graphics]
 git = "https://github.com/servo/core-graphics-rs"
