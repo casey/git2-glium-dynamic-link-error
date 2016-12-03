@@ -1,5 +1,5 @@
 [root]
-name = "git2-rs-linker-error"
+name = "rust-dynamic-linker-error"
 version = "0.0.0"
 dependencies = [
  "core-graphics 0.4.2 (git+https://github.com/servo/core-graphics-rs)",
